@@ -27,7 +27,7 @@
 
       <!-- Logo -->
       <div class="col-sm-8">
-        <h1>Сервіс обліку студентів</h1>
+        <h1>{% block logo %}Сервіс обліку студентів{% endblock %}</h1>
       </div>
 
       <!-- Groups Selector -->
@@ -44,6 +44,7 @@
     <!-- End Header -->
 
     <!-- Start SubHeader -->
+    {% block menu %}
     <div class="row" id="sub-header">
       <div class="col-sm-12">
         <ul class="nav nav-tabs">
@@ -59,6 +60,7 @@
         </ul>
       </div>
     </div>
+    {% endblock %}
     <!-- End SubHeader -->
 
 
@@ -83,7 +85,9 @@
     <!-- Start Footer -->
     <div class="row" id="footer">
       <div class="col-sm-12">
+        {% block footer %}
         &copy; 2020 Сервіс Обліку Студентів
+        {% endblock %}
       </div>
     </div>
     <!-- End Footer -->
